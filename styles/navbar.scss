@@ -1,0 +1,51 @@
+@import '/styles/globals';
+
+.canvas_navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.logo {
+    position: fixed;
+}
+
+/* ------------------------------ Desktop ------------------------------ */
+@media screen and (min-width: 1280px) {
+    .canvas_navbar {
+        height: 225px;
+        width: 200px;
+    }
+
+    .logo {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+/* ------------------------------ Tablet ------------------------------ */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .canvas_navbar {
+        height: 200px;
+        width: 175px;
+    }
+
+    .logo {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* ------------------------------ Smartphone ------------------------------ */
+@media screen and (max-width: 767px) {
+    .canvas_navbar {
+        height: 175px;
+        width: 150px;
+    }
+
+    .logo {
+        top: 15px;
+        left: 5px;
+    }
+}

@@ -51,12 +51,6 @@ body {
     overflow-x: hidden;
 }
 
-canvas {
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
-}
-
 h1,
 h2,
 h3,
@@ -118,14 +112,6 @@ a {
 }
 
 // ------------------------------ Canvases ------------------------------
-.canvas_navbar {
-  position: fixed;
-  top: 0;
-  height: 50vh;
-  width: 100%;
-  z-index: 1;
-}
-
 .canvas_experience {
   position: absolute;
   top: 0;
@@ -140,7 +126,7 @@ a {
   height: 100vh;
   background: linear-gradient(180deg, $white 0%, $dark 100%);
   opacity: 0.25;
-  z-index: 50;
+  z-index: 1;
 }
 
 .one {

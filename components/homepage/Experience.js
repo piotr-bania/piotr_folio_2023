@@ -13,14 +13,13 @@ const Experience = () => {
                 animate={{ opacity: 1, transition: { delay: 0.1, duration: 2 } }}
                 >
                 <Canvas
-                    shadows dpr={[1, 2]}
                     camera={{
-                        position: [0, 15, 35],
-                        fov: 22 }}
+                        position: [0, 0, 5],
+                        fov: 35 }}
                     >
-                    <OrbitControls />
+                    {/* <OrbitControls /> */}
                     <Environment
-                        files='./environment/dikhololo_night_1k.hdr' />
+                        files='./environment/neon_photostudio_1k.hdr' />
                     <Suspense fallback={null}>
                         <Model />
                     </Suspense>

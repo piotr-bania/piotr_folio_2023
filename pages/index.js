@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { motion as m } from 'framer-motion'
 import Experience from '../components/homepage/Experience'
 import Hero from '../components/homepage/Hero'
+import About from '../components/homepage/About'
 
 export default function Home() {
     return (
@@ -25,6 +26,7 @@ export default function Home() {
                 }}>
                 <Experience />
                 <Hero />
+                <About />
             </m.main>
         </>
     )

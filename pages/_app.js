@@ -1,5 +1,6 @@
 import '../styles/globals.scss'
 import '../styles/homepage/hero.scss'
+import '../styles/navbar.scss'
 import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {

@@ -5,7 +5,7 @@ import Strips from './Strips'
 const Layout = ({children}) => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <Strips />
             { children }
             {/* <Footer /> */}
