@@ -19,7 +19,14 @@ const Experience = () => {
                         fov: 22 }}
                     >
                     <Suspense fallback={null}>
-                        <Text>Navbar items goes here</Text>
+                        <Text
+                            fontSize={ 2 }
+                            color="#7161F5"
+                            maxWidth={ 15 }
+                            textAlign="center"
+                        >
+                            Navbar items goes here
+                        </Text>
                     </Suspense>
                 </Canvas>
             </m.div>

@@ -1,5 +1,5 @@
-import React, { Suspense, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
 
 const Model = () => {
 
@@ -13,7 +13,7 @@ const Model = () => {
 
     return (
         <>
-            <mesh ref={boxRef}>
+            <mesh ref={boxRef} scale={4} >
                 <boxGeometry />
                 <meshStandardMaterial />
             </mesh>
