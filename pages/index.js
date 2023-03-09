@@ -25,8 +25,8 @@ export default function Home() {
                     delay: 0.25
                 }}>
                 <Experience />
-                <Hero />
-                <About />
+                {/* <Hero /> */}
+                {/* <About /> */}
             </m.main>
         </>
     )

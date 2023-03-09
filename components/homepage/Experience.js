@@ -17,7 +17,7 @@ const Experience = () => {
                         position: [0, 0, 5],
                         fov: 35 }}
                     >
-                    {/* <OrbitControls /> */}
+                    <OrbitControls />
                     <Environment
                         files='./environment/neon_photostudio_1k.hdr' />
                     <Suspense fallback={null}>

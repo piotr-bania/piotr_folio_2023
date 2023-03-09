@@ -10,12 +10,6 @@ const Model = () => {
 
     const model_1 = useLoader(GLTFLoader, './models/model_1.glb')
 
-    const material = new THREE.ShaderMaterial({
-        vertexShader: vertexShader,
-        fragmentShader: fragmentShader,
-        side: THREE.DoubleSide
-    })
-
     return (
         <>
             {/* <mesh
