@@ -1,11 +1,9 @@
 import React, { useRef } from 'react'
 import { useFrame, useLoader, extend } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { shaderMaterial } from '@react-three/drei'
 import * as THREE from 'three'
 import planeVertexShader from '../../shaders/vertex.glsl'
 import planeFragmentShader from '../../shaders/framgent.glsl'
-
 import { Leva, useControls } from 'leva'
 
 const PlaneMaterial = shaderMaterial(
@@ -26,68 +24,28 @@ const PlaneMaterial = shaderMaterial(
 extend({ PlaneMaterial })
 
 const Model = () => {
-
     const shaderControls = useControls('shader', {
-        alpha: {
-            min: 0, max: 1, value: 0.5
-        },
-        // multiplier: {
-        //     min: 1, max: 25, value: 10
-        // },
-        // color_A: '#FFFFFF',
-        // color_B: '#000000',
-        frquency: {
-            min: 1, max: 25, value: 10
-        },
+        alpha: { min: 0, max: 1, value: 0.5 },
+        frquency: { min: 1, max: 25, value: 10 },
     })
-
     const shaderRef = useRef()
     useFrame((state) => {
         shaderRef.current.u_Time = state.clock.elapsedTime
     })
-
-    const model_1 = useLoader(GLTFLoader, './models/model_1.glb')
-    
     const [image] = useLoader(THREE.TextureLoader, ['./images/1.jpg'])
-
+    
     return (
         <>
-            {/* <mesh
-                position={[0, 0, 0]}
-                geometry={model_1.nodes.TwistedTorus.geometry}
-            >
-            <planeMaterial  />
-            <meshStandardMaterial
-                attach="material"
-                color={"#F5F4FE"}
-                transparent={true}
-                opacity={0.5}
-                metalness={0.95}
-                roughness={0.05}
-            />
-            </mesh> */}
-
-            <mesh>
-                <planeGeometry args={[2, 2, 50, 50]} />
+            <mesh position={[0.75, 0, 0]}>
+                <planeGeometry args={[2.5, 2.5, 50, 50]} />
                 <planeMaterial
-                    // wireframe
                     ref={shaderRef}
                     side={THREE.DoubleSide}
                     transparent
                     u_Alpha={shaderControls.alpha}
-                    // u_Multiplayer={shaderControls.multiplier}
-                    // u_Color_A={shaderControls.color_A}
-                    // u_Color_B={shaderControls.color_B}
                     u_Frequency={shaderControls.frquency}
                     u_Texture={image}
                 />
-
-                {/* <shaderMaterial
-                    wireframe
-                    side={THREE.DoubleSide}
-                    fragmentShader={fragmentShader}
-                    vertexShader={vertexShader}
-                /> */}
             </mesh>
         </>
     )

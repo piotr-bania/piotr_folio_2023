@@ -19,12 +19,12 @@ const Hero = () => {
                     <p>Short paragraph describing this particular section</p>
                     <button>Call to action</button>
                 </m.div>
-                <m.div
+                {/* <m.div
                     className="hero_image"
                     initial={{opacity: 0}}
                     animate={{ opacity: 1, transition: {delay: 1, duration: 2, ease: 'easeInOut'} }}
                     >
-                </m.div>
+                </m.div> */}
             </section>
         </AnimatePresence>
     )
