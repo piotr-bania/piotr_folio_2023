@@ -16,6 +16,8 @@ const PlaneMaterial = shaderMaterial(
         u_Color_B: new THREE.Color('#000000'),
         u_Time: 0,
         u_Frequency: 10,
+        u_Color: new THREE.Color(0.0, 0.0, 0.0),
+        u_Texture: new THREE.Texture(),
     },
     planeVertexShader,
     planeFragmentShader
@@ -45,6 +47,8 @@ const Model = () => {
     })
 
     const model_1 = useLoader(GLTFLoader, './models/model_1.glb')
+    
+    const [image] = useLoader(THREE.TextureLoader, ['./images/1.jpg'])
 
     return (
         <>
@@ -75,6 +79,7 @@ const Model = () => {
                     // u_Color_A={shaderControls.color_A}
                     // u_Color_B={shaderControls.color_B}
                     u_Frequency={shaderControls.frquency}
+                    u_Texture={image}
                 />
 
                 {/* <shaderMaterial

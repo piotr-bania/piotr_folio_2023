@@ -5,6 +5,7 @@ uniform float u_Multiplayer;
 uniform vec3 u_Color_A;
 uniform vec3 u_Color_B;
 uniform float u_Time;
+uniform sampler2D u_Texture;
 
 varying vec2 vUv;
 
@@ -15,5 +16,6 @@ void main() {
 
 	// gl_FragColor.rgba = vec4(mixColor, min(strength, u_Alpha));
 
-    gl_FragColor.rgba = vec4(1.0, 0.0, 1.0, u_Alpha);
+    vec3 texture = texture2D(u_Texture, vUv).rgb;
+    gl_FragColor = vec4(texture, 1.0); 
 }
