@@ -15,6 +15,7 @@ const PlaneMaterial = shaderMaterial(
         u_Color_A: new THREE.Color('#FFFFFF'),
         u_Color_B: new THREE.Color('#000000'),
         u_Time: 0,
+        u_Frequency: 10,
     },
     planeVertexShader,
     planeFragmentShader
@@ -28,11 +29,14 @@ const Model = () => {
         alpha: {
             min: 0, max: 1, value: 0.5
         },
-        multiplier: {
+        // multiplier: {
+        //     min: 1, max: 25, value: 10
+        // },
+        // color_A: '#FFFFFF',
+        // color_B: '#000000',
+        frquency: {
             min: 1, max: 25, value: 10
         },
-        color_A: '#FFFFFF',
-        color_B: '#000000'
     })
 
     const shaderRef = useRef()
@@ -60,16 +64,17 @@ const Model = () => {
             </mesh> */}
 
             <mesh>
-                <planeGeometry args={[2, 2, 20, 20]} />
+                <planeGeometry args={[2, 2, 50, 50]} />
                 <planeMaterial
                     // wireframe
                     ref={shaderRef}
                     side={THREE.DoubleSide}
                     transparent
                     u_Alpha={shaderControls.alpha}
-                    u_Multiplayer={shaderControls.multiplier}
-                    u_Color_A={shaderControls.color_A}
-                    u_Color_B={shaderControls.color_B}
+                    // u_Multiplayer={shaderControls.multiplier}
+                    // u_Color_A={shaderControls.color_A}
+                    // u_Color_B={shaderControls.color_B}
+                    u_Frequency={shaderControls.frquency}
                 />
 
                 {/* <shaderMaterial
