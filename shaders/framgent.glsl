@@ -1,5 +1,3 @@
-precision mediump float;
-
 uniform float u_Alpha;
 uniform float u_Multiplayer;
 uniform vec3 u_Color_A;
@@ -17,5 +15,5 @@ void main() {
 	// gl_FragColor.rgba = vec4(mixColor, min(strength, u_Alpha));
 
     vec3 texture = texture2D(u_Texture, vUv).rgb;
-    gl_FragColor = vec4(texture, u_Alpha); 
+    gl_FragColor = vec4(texture, 1.0); 
 }
