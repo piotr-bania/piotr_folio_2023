@@ -6,6 +6,14 @@ import * as THREE from 'three'
 import vertexShader from '../../shaders/vertex.glsl'
 import fragmentShader from '../../shaders/framgent.glsl'
 
+const WaveShaderMaterial = shaderMaterial({
+    uTime: 0,
+    uColor: new THREE.Color(0.0, 0.0, 0.0),
+    uTexture: new THREE.Texture()
+})
+
+extend({WaveShaderMaterial})
+
 const Model = () => {
 
     const model_1 = useLoader(GLTFLoader, './models/model_1.glb')
@@ -30,8 +38,10 @@ const Model = () => {
             <mesh>
                 <planeGeometry args={[2, 2]} />
                 <shaderMaterial
+                    side={THREE.DoubleSide}
                     fragmentShader={fragmentShader}
-                    vertexShader={vertexShader}/>
+                    vertexShader={vertexShader}
+                />
             </mesh>
         </>
     )
