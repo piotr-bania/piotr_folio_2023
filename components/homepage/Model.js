@@ -24,10 +24,10 @@ const PlaneMaterial = shaderMaterial(
 extend({ PlaneMaterial })
 
 const Model = () => {
-    const shaderControls = useControls('shader', {
-        alpha: { min: 0, max: 1, value: 0.5 },
-        frquency: { min: 1, max: 25, value: 10 },
-    })
+    // const shaderControls = useControls('shader', {
+    //     alpha: { min: 0, max: 1, value: 1 },
+    //     frquency: { min: 1, max: 25, value: 2 },
+    // })
     const shaderRef = useRef()
     useFrame((state) => {
         shaderRef.current.u_Time = state.clock.elapsedTime
@@ -36,15 +36,15 @@ const Model = () => {
     
     return (
         <>
-            <mesh position={[0.75, 0, 0]}>
+            <mesh position={[1, 0, 0]}>
                 <planeGeometry args={[2.5, 2.5, 50, 50]} />
                 <planeMaterial
                     ref={shaderRef}
+                    u_Texture={image}
+                    // u_Alpha={shaderControls.alpha}
+                    // u_Frequency={shaderControls.frquency}
                     side={THREE.DoubleSide}
                     transparent
-                    u_Alpha={shaderControls.alpha}
-                    u_Frequency={shaderControls.frquency}
-                    u_Texture={image}
                 />
             </mesh>
         </>

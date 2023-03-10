@@ -18,6 +18,13 @@ const About = () => {
                     <h1>A header goes here</h1>
                     <h2>Subheader goes here</h2>
                     <p>Short paragraph describing this particular section</p>
+                    <h1>This</h1> <br /> <br /> <br />
+                    <h1>Will</h1> <br /> <br /> <br />
+                    <h1>Be</h1> <br /> <br /> <br />
+                    <h1>About</h1> <br /> <br /> <br />
+                    <h1>Me</h1> <br /> <br /> <br />
+                    <h1>Section</h1> <br /> <br /> <br />
+                    <p>End of the page</p>
                 </m.div>
 
                 <m.div

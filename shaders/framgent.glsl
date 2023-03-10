@@ -15,5 +15,5 @@ void main() {
 	// gl_FragColor.rgba = vec4(mixColor, min(strength, u_Alpha));
 
     vec3 texture = texture2D(u_Texture, vUv).rgb;
-    gl_FragColor = vec4(texture, 1.0); 
+    gl_FragColor = vec4(texture, u_Alpha); 
 }

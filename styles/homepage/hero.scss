@@ -15,12 +15,20 @@
     }
 }
 
+.canvas_hero_homepage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
 /* ------------------------------ Desktop ------------------------------ */
 @media screen and (min-width: 1280px) {
     #hero {
         .hero_text {
             width: 80vw;
-            bottom: 10vh;
+            bottom: 14vh;
             left: 10vw;
 
             h1 {
@@ -34,13 +42,6 @@
             p {
                 margin-right: 40vw;
             }
-        }
-
-        .hero_image {
-            width: 80vh;
-            height: 80vh;
-            right: 15vw;
-            bottom: 10vh;
         }
     }
 }
@@ -50,7 +51,7 @@
     #hero {
         .hero_text {
             width: 80vw;
-            bottom: 10vh;
+            bottom: 12vh;
             left: 10vw;
 
             h1 {
@@ -65,13 +66,6 @@
                 margin-right: 40vw;
             }
         }
-
-        .hero_image {
-            width: 60vh;
-            height: 60vh;
-            right: 10vw;
-            bottom: 20vh;
-        }
     }
 }
 
@@ -80,7 +74,7 @@
     #hero {
         .hero_text {
             width: 90vw;
-            bottom: 5vh;
+            bottom: 10vh;
             left: 5vw;
 
             h1 {
@@ -94,13 +88,6 @@
             p {
                 margin-right: 20vw;
             }
-        }
-
-        .hero_image {
-            width: 40vh;
-            height: 40vh;
-            right: 5vw;
-            bottom: 30vh;
         }
     }
 }

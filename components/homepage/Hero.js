@@ -14,17 +14,9 @@ const Hero = () => {
                     initial={{opacity: 0}}
                     animate={{ opacity: 1, transition: {delay: 1, duration: 2, ease: 'easeInOut'} }}
                     >
-                    <h1>A header goes here</h1>
-                    <h2>Subheader goes here</h2>
-                    <p>Short paragraph describing this particular section</p>
-                    <button>Call to action</button>
+                    <h1>Piotr Bania - Creative Web Developer</h1>
+                    <h2>Crafting immersive experiences with Next.js, Three.js, GLSL and React Three Fiber</h2>
                 </m.div>
-                {/* <m.div
-                    className="hero_image"
-                    initial={{opacity: 0}}
-                    animate={{ opacity: 1, transition: {delay: 1, duration: 2, ease: 'easeInOut'} }}
-                    >
-                </m.div> */}
             </section>
         </AnimatePresence>
     )

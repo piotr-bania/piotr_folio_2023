@@ -111,35 +111,27 @@ a {
     }
 }
 
-// ------------------------------ Canvases ------------------------------
-.canvas_experience {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-}
-
 // ------------------------------ Strips ------------------------------
 .strip {
-  position: fixed;
-  width: 1px;
-  height: 100vh;
-  background: linear-gradient(180deg, $white 0%, $dark 100%);
-  opacity: 0.25;
-  z-index: 1;
+    position: fixed;
+    width: 1px;
+    height: 100vh;
+    background: linear-gradient(180deg, $white 0%, $dark 100%);
+    opacity: 0.25;
+    z-index: 1;
 }
 
 .one {
-  left: 25%;
-  top: 0;
+    left: 25%;
+    top: 0;
 }
 
 .two {
-  left: 50%;
-  top: 0;
+    left: 50%;
+    top: 0;
 }
 
 .three {
-  right: 25%;
-  top: 0;
+    right: 25%;
+    top: 0;
 }
