@@ -4,6 +4,7 @@ import { AnimatePresence, motion as m } from 'framer-motion'
 import { Environment, OrbitControls } from '@react-three/drei'
 import Model from './Model'
 import Button from './Button'
+import Test from './Test'
 
 const Experience = () => {
     return (
@@ -22,8 +23,9 @@ const Experience = () => {
                     <Environment
                         files='./environment/neon_photostudio_1k.hdr' />
                     <Suspense fallback={null}>
-                        <Model />
-                        <Button />
+                        {/* <Model /> */}
+                        {/* <Button /> */}
+                        <Test />
                     </Suspense>
                 </Canvas>
             </m.div>

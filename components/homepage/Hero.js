@@ -14,8 +14,8 @@ const Hero = () => {
                     initial={{opacity: 0}}
                     animate={{ opacity: 1, transition: {delay: 1, duration: 2, ease: 'easeInOut'} }}
                     >
-                    <h1>Piotr Bania - Creative Web Developer</h1>
-                    <h2>Crafting immersive experiences with Next.js, Three.js, GLSL and React Three Fiber</h2>
+                    {/* <h1>Piotr Bania - Creative Web Developer</h1>
+                    <h2>Crafting immersive experiences with Next.js, Three.js, GLSL and React Three Fiber</h2> */}
                 </m.div>
             </section>
         </AnimatePresence>

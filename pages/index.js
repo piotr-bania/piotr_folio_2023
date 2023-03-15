@@ -26,7 +26,7 @@ export default function Home() {
                 }}>
                 <Experience />
                 <Hero />
-                <About />
+                {/* <About /> */}
             </m.main>
         </>
     )
